@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Team Hembre</title>
+  <link rel="shortcut icon" href="pictures/logo2.svg" />
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- For å få facebook logoen i footeren, henter altså library-->
+
+</head>
+<body>
+  <script src="script/data.js"></script>
+  <script src="script/navbar.js"></script>
+
+  <main>
+    <header id="header_about_us"> <!--The upper part of about us with the backgound image -->
+
+      <div class="header_top">
+
+
+        <section class="logo">
+          <h3 class="header_over_om_oss">We are</h3>
+          <img src="pictures/logo2.svg" alt="logo">
+        </section>
+        <div class="knapp_header">
+          <a href="#about_team_hembre">MORE ABOUT US ⬇</a>
+        </div>
+
+
+        <div class="name_header element_about_us"> <!-- The name you can see on the bottom of the screen when you load in the site which are made in javascript about_us.js  -->
+        </div>
+
+      </div>
+    </header>
+
+    <div class="element_about_us" id="won">  <!--To show off all the medals they have won -->
+      <div>
+        <h1 id="gold"></h1>
+        <h2>GOLD</h2>
+      </div>
+      <div>
+        <h1 id="silver">4</h1>
+        <h2>SILVER</h2>
+      </div>
+
+      <div>
+        <h1 id="bronze">46</h1>
+        <h2>BRONZE</h2>
+      </div>
+    </div>
+
+    <div class="element_about_us" id="about_team_hembre"> <!-- The paart about the whole Team Hembre with headlines, images and text -->
+      <h1>TEAM HEMBRE</h1>
+      <p>
+        The Hembre family is a family with incredible skill shooting in several
+        genres. It is now in the 4th generation with pistol shooters and now has
+        4 active Hembre pistol shooters that take Norway's records by storm.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+
+      <div id="pictures_team">
+        <div id="picture1">
+          <img src="pictures/about6.jpg" alt="Sjøholt - 18/04/2017" />
+          <div class="picture_info">Sjøholt - 18/04/2017</div>
+        </div>
+        <div id="picture2">
+          <img src="pictures/about2.jpg" alt="Bærum PK - 10/07/2019" />
+          <div class="picture_info">Bærum PK - 10/07/2019</div>
+        </div>
+        <div id="picture3">
+          <img src="pictures/about6.jpg" alt="Molde - 28/05/2018" />
+          <div class="picture_info">Molde - 28/05/2018</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="element_about_us" id="all_athletes">
+
+    </div>
+
+  </main>
+
+
+  <script src="script/shooters.js"></script>
+  <script src="script/about_us.js"></script>
+  <script src="script/footer.js"></script>
+
+
+
+  <script>
+    // Called function outside of about_us.js so you can use the about_us.js script functions on other sites if necesary
+    makeNameHeader()
+    writeStatsOmOss()
+    writeMedals()
+  </script>
+</body>
+
+</html>

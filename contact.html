@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Team Hembre</title>
+  <link rel="shortcut icon" href="pictures/logo2.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+</head>
+
+<body>
+  <script src="script/data.js"></script>
+  <script src="script/navbar.js"></script>
+  <main id="contact-main">
+
+    <div id="formContainer">
+      <div class="form_response"> <!-- The response you will get when sending in the form, done mostly in javascript on the bottom of the file  -->
+        <p> <span>&#10004;</span> Your message has been delivered, thank you!</p> <!-- &#10004; is the format for a check symbol for the popup  -->
+      </div>
+      <h1>Contact us</h1>
+      <p>
+        Fill out the form, and we'll take contact as soon as we can.
+      </p>
+
+      <form id="contactForm" method="get">
+
+        <div class="gridElement" id="f_mail"> <!--The mail input div  -->
+          <label for="email">Mail:</label>
+          <input type="email" required name="email" id="email" />
+        </div>
+
+        <div class="gridElement" id="f_melding"> <!--The message input div  -->
+          <label for="melding">Message (max 400 letters ):</label>
+          <textarea name="melding" id="melding" maxlength="400"></textarea>
+        </div>
+
+        <div class="gridElement" id="f_first_name"> <!--The first name input div -->
+          <label for="first_name">First name:</label>
+          <input type="text" name="first_name" required id="first_name" />
+        </div>
+
+        <div class="gridElement" id="f_last_name">  <!--The last name input div  -->
+          <label for="last_name">Last name:</label>
+          <input type="text" name="last_name" required id="last_name" />
+        </div>
+
+        <div class="gridElement" id="f_telephone">  <!--The phone number input div  -->
+          <label for="telephone">Phone number:</label>
+          <input type="text" name="telephone" required id="telephone" />
+        </div>
+
+        <div class="gridElement" id="f_submit">  <!--The submit button div  -->
+          <button type="submit" class="pointer active" name="button">Send</button>
+        </div>
+      </form>
+
+    </div>
+    <div class="subFolder">  <!-- Part with map and training location set in a display flex -->
+      <div id="mapContainer" class="subContainers"></div>  <!-- The map made in map.js   -->
+      <div id="infoContainer" class="subContainers"> <!-- Container with were tesm Hembre train -->
+        <img src="pictures/logo2.svg" alt="logo">
+        <h4>We practice at </h4>
+        <p>BÆRUM PISTOLKLUBB</p>
+        <p>1344 Haslum</p>
+        <p>E-mail: pal.hembre@gmail.com</p>
+        <p>Phone: 32563893</p>
+      </div>
+    </div>
+
+  </main>
+<!-- part of script for getting the map on contact.html-->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin="">
+  </script>
+
+  <script src="script/map.js"></script>
+  <script src="script/shooters.js"></script>
+  <script src="script/footer.js"></script>
+  <script>
+    response = document.querySelector(".form_response")
+    if (window.location.href.indexOf("?email") > 0) {
+      response.style.animation = "fadeOut 5s"
+      response.style.webkitAnimation = "fadeOut 5s"
+      //legger til annimasjon på response elementet, se main css
+
+    }
+  </script>
+</body>
+
+</html>
